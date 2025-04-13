@@ -10,9 +10,21 @@ const CountDownTimer = () => {
 
     function getTimeRemaining(e) {
         const total = DataTransfer.parse(e) - Date.parse(new Date ())
+        const hour = Math.floor((total / (1000 * 60 * 60)) % 24);
+        const minute = Math.floor((total / 1000 / 60) % 60);
+        const seconds = Math.floor((total / 1000) % 60);
+
+        return{total, hour, minute, seconds}
     }
     function startTimer(e){
         let{total, hour, minute, seconds} - getTimeRemaining(e)
+        if (total >=0) {
+            setTimer(
+                (hour < 10 ? "0" + hour : hour) + ":" +
+                (minute < 10 ? "0" + minute : minute) + ":" +
+                (seconds < 10 ? "0" + seconds : seconds)
+            )
+        }
     }
 
 
