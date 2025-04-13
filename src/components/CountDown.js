@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+import "../styles/CountDown.css"
 
 const CountDownTimer = () => {
     const [timer, setTimer] = useState("00:00:00");
     const Ref = useRef(null);
 
-    // Calculates the time left until deadline
     function getTimeRemaining(deadline) {
         const total = Date.parse(deadline) - Date.parse(new Date());
         const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
@@ -14,7 +14,7 @@ const CountDownTimer = () => {
         return { total, hours, minutes, seconds };
     }
 
-    // Updates the timer every second
+
     function startTimer(deadline) {
         let { total, hours, minutes, seconds } = getTimeRemaining(deadline);
 
@@ -39,7 +39,7 @@ const CountDownTimer = () => {
         Ref.current = id;
     }
 
-    // Sets deadline to 10 seconds from now
+
     function getDeadTime() {
         let deadline = new Date();
         deadline.setSeconds(deadline.getSeconds() + 10); //you can change time from here
