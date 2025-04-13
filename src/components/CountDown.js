@@ -6,4 +6,4 @@ const CountDownTimer = () => {
     )
 }
 
-export defaultCountDownTimer
+export default CountDownTimer 
