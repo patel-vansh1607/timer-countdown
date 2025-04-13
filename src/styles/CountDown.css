@@ -1,0 +1,42 @@
+/* CountDownTimer.css */
+
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1d2a35;
+  }
+  
+  .countdown-timer {
+    background: linear-gradient(135deg, #00ffe7, #84ffff);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 255, 231, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .countdown-timer:hover {
+    transform: scale(1.05);
+  }
+  
+  .countdown-timer h1 {
+    margin: 0;
+    font-size: 60px;
+    font-family: 'ManropeRegular', sans-serif;
+    color: #1d2a35;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #ffffff80;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .countdown-timer {
+      padding: 30px 40px;
+    }
+  
+    .countdown-timer h1 {
+      font-size: 36px;
+    }
+  }
+  
